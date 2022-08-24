@@ -1,0 +1,14 @@
+h1{
+    font-size: 35px;
+}
+
+.size{
+    width: 402px;
+    height: 252px;
+    margin-left: 20px;
+}
+
+.img{
+    object-fit: cover;
+    height: 400px;
+} 
