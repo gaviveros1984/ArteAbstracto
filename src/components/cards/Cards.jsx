@@ -1,6 +1,11 @@
 import './Cards.css'
+import CounterCustomHook  from '../CounterCustomHook'
 
 function Cards(props) {
+
+  function onAdd (count){
+    console.log('El total es ' + count)
+  }
     return (
       <>
         <div className="card size text-white">
@@ -11,6 +16,7 @@ function Cards(props) {
               <a href="#" className="btn btn-primary">Ver más</a>
             </div>
         </div>
+        <CounterCustomHook stock = {5} onAdd = {onAdd}/>
       </>
     )
   }
