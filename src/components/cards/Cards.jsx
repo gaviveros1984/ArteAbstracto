@@ -1,5 +1,6 @@
 import './Cards.css'
 import CounterCustomHook  from '../CounterCustomHook'
+import ItemContainer from '../ItemContainer'
 
 function Cards(props) {
 
@@ -13,10 +14,11 @@ function Cards(props) {
             <div className="card-img-overlay">
               <h1 className="card-title">{props.artista}</h1>
               <p className="card-text">{props.nombreObra}</p>
-              <a href="#" className="btn btn-primary">Ver más</a>
+              <button href="#" className="btn btn-primary">Ver más</button>
             </div>
         </div>
         <CounterCustomHook stock = {5} onAdd = {onAdd}/>
+        <ItemContainer/>
       </>
     )
   }
