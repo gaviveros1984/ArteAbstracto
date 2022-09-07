@@ -1,7 +1,7 @@
 import React from "react"; 
 
-const Item = ({pokemon}) => {
-    return <li>{pokemon.name}</li>
+const Item = ({artists}) => {
+    return <li>{artists.name}</li>
 }
 
 export default Item

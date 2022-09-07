@@ -1,13 +1,14 @@
-import React from "react";
-import Item from './Item'
+import React from 'react'
+import {Cards} from './cards/Cards'
 
-const ItemList = ({list}) => {
-    return (
-        <ul>
-        {list.map((pokemon) => (
-        <Item pokemon = {pokemon} key = {pokemon.name}/>
-        ))}
-        </ul>)
+export const ItemList = ({productList}) => {
+
+  return (
+    <div style={{display: 'flex', gap: '2rem'}}>
+      {
+        productList.map(item => <Cards key={item.id} productList={item} />)
+      }
+    </div>
+
+  )
 }
-
-export default ItemList 
