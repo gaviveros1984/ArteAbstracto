@@ -10,12 +10,12 @@ function NavBar(props) {
         <li>Abstr<strong>Art</strong></li>
       </Link>
 
-      <Link to='/categoria/silla'>
-        <li>Silla</li>      
+      <Link to='/categoria/Pintura'>
+        <li>Pintura</li>       
       </Link>
 
-      <Link to='/categoria/electronica'>
-      <li>Electronica</li>
+      <Link to='/categoria/Fotografía'>
+      <li>Fotografía</li>
       </Link>
 
       {props.children}

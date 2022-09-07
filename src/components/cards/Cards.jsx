@@ -1,5 +1,8 @@
-import './Cards';
+import './Cards.css';
 import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 export const Cards = ({productList}) => {
   const {title, img, price, id} = productList
@@ -15,6 +18,5 @@ export const Cards = ({productList}) => {
         <button className='button button-detail'> Ver más detalles</button>
       </Link>
     </div>
-
   )
-}
+} 
