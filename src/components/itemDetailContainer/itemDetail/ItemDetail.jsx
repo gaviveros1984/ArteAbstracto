@@ -1,4 +1,4 @@
-import CounterCustomHook from './counterCustomHook/CounterCustomHook'
+import CounterCustomHook from '../counterCustomHook/CounterCustomHook'
 
 export const ItemDetail = ({item}) => {
 

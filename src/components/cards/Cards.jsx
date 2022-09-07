@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
 import './Cards';
-import ItemDetailContainer from '../ItemDetailContainer';
-import CounterCustomHook from '../CounterCustomHook'
-import ItemDetail from '../ItemDetail';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom'
 
 export const Cards = ({productList}) => {
   const {title, img, price, id} = productList
@@ -15,7 +11,10 @@ export const Cards = ({productList}) => {
         <img className='img' src={img} alt={`Imagen del producto ${title}`} />
       </div>
       <p className='price'>{price} $</p>
-      <button className='button button-detail'> Ver más detalles</button>
+      <Link to={`/detalles/${id}`}> 
+        <button className='button button-detail'> Ver más detalles</button>
+      </Link>
     </div>
+
   )
 }

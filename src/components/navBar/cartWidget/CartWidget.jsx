@@ -1,6 +1,6 @@
-import lightMode from '../../img/lightbulb.svg'
-import bell from '../../img/bell.svg'
-import bag from '../../img/bag.svg'
+import lightMode from '../../../img/lightbulb.svg'
+import bell from '../../../img/bell.svg'
+import bag from '../../../img/bag.svg'
 import './CartWidget.css'
 
 function CartWidget() {

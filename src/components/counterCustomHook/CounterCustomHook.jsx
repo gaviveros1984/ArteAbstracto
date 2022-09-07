@@ -1,5 +1,5 @@
 import React from "react";
-import UseCounter from "../hooks/UseCounter"; 
+import UseCounter from "../../../hooks/UseCounter"; 
 
 const CounterCustomHook = ({stock, onAdd}) => {
     const {add, substract, reset, count} = UseCounter(stock) // LLAMA AL USECOUNTER
