@@ -1,7 +1,9 @@
 import {useState} from 'react'
 
+
 const useCounter = (stock, onAdd) => {
     const [count, setCount] = useState(0)
+
 
     function add(){
         if(count < stock){
@@ -13,7 +15,7 @@ const useCounter = (stock, onAdd) => {
         if(count > 0){
             setCount(count -1)
         }
-    }
+    } 
 
     function reset(){
         setCount(0)

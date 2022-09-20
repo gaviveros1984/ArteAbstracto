@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {Cards} from '../../cards/Cards'
 
 export const ItemList = ({productList}) => {
