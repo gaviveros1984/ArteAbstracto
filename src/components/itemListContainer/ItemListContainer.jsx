@@ -1,16 +1,17 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState, useContext} from "react";
 import { products } from "../../mock/products";
 import { ItemList } from "./itemList/ItemList";
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom';
+import {DarkModeContext} from '../../context/DarkMode'
 
 export const ItemListContainer = () => {
 
     const {categoria} = useParams()
 
     const [productList, setproductList] = useState([])
+    const {darkMode, toggleDarkMode} = useContext(DarkModeContext)
 
-    const getProducts = () => new Promise((resolve, reject) =>{
+    const getProducts = () => new Promise((resolve) =>{
         if (categoria) {
         setTimeout(() => resolve(products.filter(item => item.category === categoria)), 2000);
         } else {
@@ -25,6 +26,9 @@ export const ItemListContainer = () => {
     }, [categoria])
 
     return (
+        <div className={darkMode ? 'darkMode' : 'lightMode'}>
+            <button className="btn btn-dark" onClick={() => toggleDarkMode()}>Cambiar modo</button>
         <ItemList productList={productList}/>
+        </div>
     )
 }
