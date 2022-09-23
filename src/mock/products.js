@@ -19,4 +19,15 @@ export const products = [
         description: "Fotografía argentina",
         img: "https://www.bellasartes.gob.ar/media/thumbs/uploads/coleccion/M8c1pS6vpsHc.jpg"
     },
+    {
+        title: "Concepto espacial, Espera/+1-AS/El jardinero está arreglando el jardín (59 T 140)",
+        artist: "Fontana, Lucio",
+        price: 2800,
+        id: 3,
+        category: "Pintura",
+        stock: 8,
+        description: "​Concepto espacial es una obra temprana de la serie de los “tajos”, aquella que contribuyó con más fuerza a la valoración de Lucio Fontana como un artista innovador, representante del experimentalismo matérico de la posguerra",
+        img: "https://www.bellasartes.gob.ar/media/thumbs/uploads/coleccion/5ng9OD_-Hkzg.jpg"
+    },
+    
 ]

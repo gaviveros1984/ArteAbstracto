@@ -5,6 +5,7 @@ import { ItemListContainer } from './components/itemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CarritoProvider } from './context/CarritoContext';
+import CartView from './components/cartView/CartView';
 
 function App() {
 
@@ -12,13 +13,14 @@ function App() {
     <BrowserRouter> 
     <CarritoProvider> 
      <NavBar >
-        <CartWidget/>
+        {<CartWidget/>}
       </NavBar>
 
       <Routes> 
         <Route path='/' element={<ItemListContainer />}/>
         <Route path='/categoria/:categoria' element={<ItemListContainer />}/>
         <Route path='/detalles/:id' element={<ItemDetailContainer />}/>
+        <Route path='/cart/' element={<CartView />}/>
       </Routes>
     </CarritoProvider>
     </BrowserRouter>

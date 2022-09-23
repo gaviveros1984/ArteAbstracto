@@ -1,4 +1,5 @@
 import React from "react";
+import "../counterCustomHook/CounterCustomHook.css"
 import UseCounter from "../../../hooks/UseCounter";
 import { useCarritoContext } from '../../../context/CarritoContext';
 
@@ -11,7 +12,7 @@ const CounterCustomHook = ({stock, name, price}) => {
 
     return(
         <div>
-            <div>
+            <div className='counter'>
                 <button className='btn' onClick={substract}> - </button>
                 <p>{count}</p>
                 <button className='btn' onClick={add}> + </button>

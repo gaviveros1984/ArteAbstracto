@@ -5,18 +5,21 @@ import Card from 'react-bootstrap/Card';
 
 
 export const Cards = ({productList}) => {
-  const {title, img, price, id} = productList
+  const {title, img, price, id, description} = productList
 
   return (
-    <div>
-      <h4>{title}</h4>
-      <div>
-        <img className='img' src={img} alt={`Imagen del producto ${title}`} />
-      </div>
+    <>
+    <Card style={{ width: '20rem'}} className="card">
+    <Card.Img variant="top" className="imgCard" src={img} />
+    <Card.Body>
+      <Card.Title>{title}</Card.Title>
       <p className='price'>{price} $</p>
+      <Card.Text>{description}</Card.Text>
       <Link to={`/detalles/${id}`}> 
-        <button className='button button-detail'> Ver más detalles</button>
+        <Button className='button button-detail'> Ver más detalles</Button>
       </Link>
-    </div>
+    </Card.Body>
+    </Card>
+    </>
   )
 } 

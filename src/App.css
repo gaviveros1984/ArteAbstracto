@@ -39,10 +39,10 @@
 
 .darkMode {
   background-color: black;
-  color: antiquewhite;
+  color: rgb(255, 255, 255);
 }
 
 .lightMode {
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   color: black;
 }

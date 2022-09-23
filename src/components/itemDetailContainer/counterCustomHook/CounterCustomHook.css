@@ -1,0 +1,9 @@
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter button {
+    margin: 20px;
+}
