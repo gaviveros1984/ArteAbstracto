@@ -3,6 +3,7 @@ import  {ItemDetail}  from './itemDetail/ItemDetail'
 import  {useParams}  from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore';
 import db from '../../service/firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 export const ItemDetailContainer = () => {
 
@@ -12,11 +13,11 @@ export const ItemDetailContainer = () => {
 
   const getSelected = async (idItem) => {
     try {
-        const document = doc(db, "Items", idItem)
-        const response = await getDoc(document)
-        const result = { id: response.id, ...response.data() }
-        console.log(result)
-        setSelectedItem(result)
+      const document = query(collection (db, "Items"), where ("id", "==",Number(idItem)))
+      const col = await getDocs(document)
+      console.log("col.docs", col.docs)
+      const result = col.docs.map((doc) => doc = {id:doc.id,...doc.data()})
+      setSelectedItem(...result)
     } catch (error) {
         console.log(error)
     }

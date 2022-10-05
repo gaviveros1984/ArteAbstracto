@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 export const ItemDetail = ({item}) => {
 
+  console.log({item})
   return (
     <>
     <article>
